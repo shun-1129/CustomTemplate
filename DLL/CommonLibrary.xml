@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CommonLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:CommonLibrary.Common.Logger">
+            <summary>
+            ロガークラス
+            </summary>
+        </member>
+        <member name="M:CommonLibrary.Common.Logger.#ctor(System.Type)">
+            <summary>
+            デフォルトコンストラクタ
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="M:CommonLibrary.Common.Logger.#ctor(NLog.Logger)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="M:CommonLibrary.Common.Logger.Write(NLog.LogLevel,System.String,System.Object[])">
+            <summary>
+            ログ書き込み
+            </summary>
+            <param name="level">ログレベル</param>
+            <param name="message">メッセージ</param>
+            <param name="args">パラメータ</param>
+        </member>
+        <member name="M:CommonLibrary.Common.Logger.Info(System.String,System.Object[])">
+            <summary>
+            Infoレベルログ
+            </summary>
+            <param name="message">メッセージ</param>
+            <param name="args">パラメータ</param>
+        </member>
+        <member name="M:CommonLibrary.Common.Logger.Debug(System.String,System.Object[])">
+            <summary>
+            Debugレベルログ
+            </summary>
+            <param name="message">メッセージ</param>
+            <param name="args">パラメータ</param>
+        </member>
+        <member name="M:CommonLibrary.Common.Logger.Warn(System.String,System.Object[])">
+            <summary>
+            Warnレベルログ
+            </summary>
+            <param name="message">メッセージ</param>
+            <param name="args">パラメータ</param>
+        </member>
+        <member name="M:CommonLibrary.Common.Logger.Error(System.String,System.Object[])">
+            <summary>
+            Errorレベルログ
+            </summary>
+            <param name="message">メッセージ</param>
+            <param name="args">パラメータ</param>
+        </member>
+        <member name="M:CommonLibrary.Common.Logger.Trace(System.String,System.Object[])">
+            <summary>
+            Traceレベルログ
+            </summary>
+            <param name="message">メッセージ</param>
+            <param name="args">パラメータ</param>
+        </member>
+        <member name="M:CommonLibrary.Common.Logger.Fatal(System.String,System.Object[])">
+            <summary>
+            Fatalレベルログ
+            </summary>
+            <param name="message">メッセージ</param>
+            <param name="args">パラメータ</param>
+        </member>
+    </members>
+</doc>
