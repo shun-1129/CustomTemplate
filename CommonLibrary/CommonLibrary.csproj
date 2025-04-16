@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="if &quot;$(Configuration)&quot; == &quot;Release&quot; (&#xD;&#xA;    xcopy &quot;$(TargetDir)$(TargetName).dll&quot; &quot;$(ProjectDir)..\DLL\&quot; /Y&#xD;&#xA;    xcopy &quot;$(TargetDir)$(TargetName).xml&quot; &quot;$(ProjectDir)..\DLL\&quot; /Y&#xD;&#xA;)" />
+  </Target>
+
+  <ItemGroup>
+    <PackageReference Include="NLog" Version="5.4.0" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.4.0" />
+  </ItemGroup>
+
+</Project>
