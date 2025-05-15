@@ -1,4 +1,4 @@
-﻿namespace WorkerServiceTemplate.Models.Data
+﻿namespace TestSolution.WorkerServiceTemplate.Models.Data
 {
     public class Appsettings
     {

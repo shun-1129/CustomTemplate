@@ -1,7 +1,7 @@
 using NLog.Web;
-using WorkerServiceTemplate.Models.Data;
+using TestSolution.WorkerServiceTemplate.Models.Data;
 
-namespace WorkerServiceTemplate
+namespace TestSolution.WorkerServiceTemplate
 {
     public class Program
     {
@@ -34,8 +34,9 @@ namespace WorkerServiceTemplate
             .ConfigureLogging ( logging =>
             {
                 logging.ClearProviders ();
-                logging.AddNLog ( "NLog.config" );
+                logging.SetMinimumLevel ( LogLevel.Trace );
             } )
+            .UseNLog ()
             .ConfigureServices ( ( hostContext , services ) =>
             {
                 services.Configure<Appsettings> ( hostContext.Configuration.GetSection ( "AppSettings" ) );
